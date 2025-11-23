@@ -1,0 +1,47 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a = 10, b = 0;
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = NULL;
+    FILE *fp;
+
+    printf("Runtime Exception Demonstration:\n\n");
+
+    if (b == 0) {
+        printf("Error: Division by zero detected!\n");
+    } else {
+        printf("Result = %d\n", a / b);
+    }
+
+    int index = 10;
+    if (index < 0 || index >= 5) {
+        printf("Error: Array index out of bounds!\n");
+    } else {
+        printf("Array value = %d\n", arr[index]);
+    }
+
+    if (ptr == NULL) {
+        printf("Error: Null pointer dereference attempt!\n");
+    } else {
+        printf("Pointer value = %d\n", *ptr);
+    }
+
+    fp = fopen("unknown.txt", "r");
+    if (fp == NULL) {
+        printf("Error: File not found or cannot open file!\n");
+    } else {
+        fclose(fp);
+    }
+
+    int *mem = malloc(100000000000 * sizeof(int)); // huge allocation
+    if (mem == NULL) {
+        printf("Error: Memory allocation failed!\n");
+    } else {
+        free(mem);
+    }
+
+    return 0;
+}
