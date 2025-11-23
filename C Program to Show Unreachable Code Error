@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int testFunction() {
+    printf("Inside testFunction...\n");
+    return 0;
+
+    printf("This line will never execute.\n");
+}
+
+int main() {
+    printf("Calling function...\n");
+    testFunction();
+    printf("Back to main program.\n");
+
+    return 0;
+}
