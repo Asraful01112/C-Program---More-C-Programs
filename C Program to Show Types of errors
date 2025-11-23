@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    printf("Types of Errors in C:\n\n");
+
+    int x = 10, y = 0;
+    printf("Run-time error example: Division by zero...\n");
+  
+    int n = 5;
+    int square = n * 2; 
+    printf("Logical error example: Square of 5 calculated incorrectly = %d\n", square);
+
+    printf("\nNote: Compile-time error must be uncommented to see effect.\n");
+
+    return 0;
+}
