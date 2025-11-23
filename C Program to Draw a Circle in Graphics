@@ -1,0 +1,20 @@
+#include <graphics.h>
+#include <stdio.h>
+
+int main() {
+    int gd = DETECT, gm;
+
+    initgraph(&gd, &gm, "");
+
+    setcolor(RED);
+    circle(250, 200, 100); 
+    setcolor(BLUE);
+    circle(250, 200, 50);   
+
+    printf("Press any key to close the window...\n");
+    getch();
+
+    closegraph();
+
+    return 0;
+}
